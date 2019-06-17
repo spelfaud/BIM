@@ -1,4 +1,27 @@
 categories:
 - Projectmanagement
 
-group: "-"
+
+- variable: persistence.enabled
+  default: false
+  description: "Enable persistent volume for Docker registry"
+  type: boolean
+  label: Persistent Volume Enabled
+  show_subquestion_if: true
+  group: "Persistent Storage"
+  subquestions:
+  - variable: persistence.size
+    default: "10Gi"
+    description: "Docker registry Registry Persistent Volume Size"
+    type: string
+    label: Docker Registry Volume Size
+  - variable: persistence.storageClass
+    default: ""
+    description: "If undefined or null, uses the default StorageClass. Default to null"
+    type: storageclass
+    label: Default StorageClass for Docker Registry
+  - variable: persistence.existingClaim
+    default: ""
+    description: "If not empty, uses the specified existing PVC instead of creating new one"
+    type: pvc
+label: Uses Existing Persistent Volume Cliam

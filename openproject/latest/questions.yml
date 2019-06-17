@@ -1,7 +1,7 @@
 categories:
 - Projectmanagement
 
-
+questions:
 - variable: persistence.enabled
   default: false
   description: "Enable persistent volume for Docker registry"

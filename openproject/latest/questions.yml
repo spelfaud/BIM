@@ -2,8 +2,3 @@ categories:
 - Projectmanagement
 questions:
 
-- variable: service.nodePort
-  default: ""
-  type: int
-  min: 30000
-  max: 32767

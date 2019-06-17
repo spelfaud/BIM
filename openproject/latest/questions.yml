@@ -4,22 +4,17 @@ categories:
 questions:
 - variable: persistence.enabled
   default: false
-  description: "Enable persistent volume for Docker registry"
+  description: "Persistent opslag aan of uit"
   type: boolean
   label: Persistent Volume Enabled
   show_subquestion_if: true
-  group: "Persistent Storage"
+  group: "Persistent Opslag"
   subquestions:
   - variable: persistence.size
     default: "10Gi"
-    description: "Docker registry Registry Persistent Volume Size"
+    description: "Grootte van het persistent opslagvolume"
     type: string
-    label: Docker Registry Volume Size
-  - variable: persistence.storageClass
-    default: ""
-    description: "If undefined or null, uses the default StorageClass. Default to null"
-    type: storageclass
-    label: Default StorageClass for Docker Registry
+    label: Persistent opslagvolume grootte
   - variable: persistence.existingClaim
     default: ""
     description: "If not empty, uses the specified existing PVC instead of creating new one"

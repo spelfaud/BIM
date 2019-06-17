@@ -2,5 +2,4 @@ categories:
 - Projectmanagement
 
 questions:
-- variable: persistence.enabled
   group: "Persistent Opslag"
